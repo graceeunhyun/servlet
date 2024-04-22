@@ -1,6 +1,8 @@
 package com.servlet.servlet.basic.domain.member;
 
+import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 /**
@@ -35,6 +37,10 @@ public class MemberRepository {
 
     public void clearStore(){
         store.clear();
+    }
+
+    public List<Member> findAll() {
+        return new ArrayList<>(store.values());
     }
 
 
